@@ -11,9 +11,9 @@ public class Task {
     private static final Logger log = LoggerFactory.getLogger(Task.class);
     public static void inIntesive(int i) {
         try {
-            log.info("starting I/O task{}",i);
+            log.info("starting I/O task{}, Thread Info: {}",i,Thread.currentThread());
             Thread.sleep(Duration.ofSeconds(10));
-            log.info("ending I/O task{}",i);
+            log.info("ending I/O task{}, Thread Info: {}",i,Thread.currentThread());
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
