@@ -21,7 +21,7 @@ public class InboundOutboundTaskDemo {
         Thread.Builder.OfPlatform builder = Thread.ofPlatform().name("rahman", 1);
         for (int i =0; i<MAX_PLATFORM; i++) {
             int j = i;
-            Thread thread = builder.unstarted( () -> Task.inIntesive(j));
+            Thread thread = builder.unstarted( () -> Task.inIntesive(j)); // here we are saying that give me a platform thread of unstarted type , i will be starting it
             thread.start();
         }
     }
